@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Vision Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="api2.js"></script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        #icon {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 10px; /* 조절 가능한 값 */
+            left: 10px; /* 조절 가능한 값 */
+        }
+
+        #title {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        form {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #fileform {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #fileform select,
+        #fileform input {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        #image {
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #imgframe {
+            width: 300px;
+            height: 200px;
+            margin-top: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            margin-top: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 2px solid #ccc;
+            width: 100%;
+        }
+
+        code {
+            white-space: pre;
+            display: block;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        #resultsBox {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            /* border: 1px solid #ccc; */ /* 이 부분을 주석처리 또는 삭제 */
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 추가된 부분: 버튼 스타일 */
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+
+    <script>
+        function resetForm() {
+            document.getElementById("fileform").reset();
+            document.getElementById("results").value = "";
+            document.getElementById("resultr").value = "";
+            window.location.href = 'start.html'; // Redirect to 'start' page
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <div id="title">
+            <h1>감정 읽는 뇌</h1>
+        </div>
+    
+        <a href="main.html">
+        <img id="icon" src="home.png" alt="메인화면으로 이동합니다."></a>
+
+        <form id="fileform" action="">
+            <select name="type">
+                <option value="FACE_DETECTION" selected>얼굴 감지</option>
+            </select>
+            <input type="file" name="fileField" onChange="uploadFiles(this.files)" id="image">
+            <input type="button" name="submit" onclick=Send() value="분석하기">
+            <input type="reset" value="초기화하기" onclick="resetForm()">
+        </form>
+
+        <div id="resultsBox">
+            <img id="imgframe" width="200" height="200">
+            <textarea name="results" id="results" cols="80" rows="8"></textarea>
+        </div>
+
+        <hr>
+        <textarea name="resultr" id="resultr" cols="80" rows="8"></textarea>
+        <code id="results"></code>
+    </div>
+
+    <script>
+        document.getElementById("image").addEventListener("click", goToAnotherPage);
+    </script>
+</body>
+
+</html>

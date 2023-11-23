@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 스타일은 이전과 동일하게 유지합니다. */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        #content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #image {
+            margin-right: 20px;
+        }
+
+        #image img {
+            width: 180px;
+            height: 180px;
+            cursor: pointer;
+        }
+
+        #emotions-text {
+            font-size: 90px;
+            font-weight: bold;
+        }
+
+        .outer-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .text-box {
+            font-size: 24px;
+            padding: 20px;
+            margin: 15px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            box-sizing: border-box;
+            width: 110%;
+        }
+
+        .text-box p {
+            margin: 0; /* 문단 간격을 없애기 위해 추가 */
+        }
+
+        .text-box a {
+            display: block;
+            word-wrap: break-word;
+            cursor: pointer;
+            color: blue; /* 링크 색상을 지정합니다. */
+            text-decoration: underline; /* 밑줄을 추가합니다. */
+        }
+
+        .text-box a:hover {
+            color: red; /* 호버 시 색상을 변경합니다. */
+        }
+
+        @media (max-width: 768px) {
+            .text-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title"></div>
+
+    <div id="content">
+        <div id="image">
+            <a href="main.html">
+                <img src="home.png" alt="새 이미지 설명">
+            </a>
+        </div>
+        <div id="emotions-text">감정 읽는 뇌</div>
+    </div>
+
+    <div class="outer-container">
+        <div class="container">
+            <div class="text-box">
+                <p>웃는 얼굴</p>
+            </div>
+            <div class="text-box">
+                <p><a onclick="window.location.href='https://stock.adobe.com/kr/images/man-with-perfect-brilliant-smile-unshaven-face-defocused-background-guy-happy-emotional-expression-outdoors-bearded-and-handsome-man-happy-smiling-face-white-brilliant-teeth-dentistry-concept/219702545'">링크 1</a></p>
+            </div>
+            <div class="text-box">
+                <p>놀란 얼굴</p>
+            </div>
+            <div class="text-box">
+                <p><a href="링크 2의_대상_URL">링크 2</a></p>
+            </div>
+            <div class="text-box">
+                <p>쓴거 3</p>
+            </div>
+            <div class="text-box">
+                <p><a href="링크 3의_대상_URL">링크 3</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

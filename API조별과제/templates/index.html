@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection with Google Cloud Vision API</title>
+
+    <!-- Google Cloud Vision API JavaScript 라이브러리 추가 -->
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+    <h1>Face Detection</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    <div id="result"></div>
+
+    <!-- Google Cloud Vision API를 사용하는 JavaScript 코드 추가 -->
+    <script>
+        const apiKey = '{{ api_key }}';  // Flask 애플리케이션에서 전달된 API 키
+
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const fileInput = document.querySelector('input[type="file"]');
+            const resultDiv = document.getElementById('result');
+
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const imageData = e.target.result.split(',')[1];
+
+                    // Google Cloud Vision API 호출
+                    fetch(`https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            requests: [
+                                {
+                                    image: {
+                                        content: imageData,
+                                    },
+                                    features: [
+                                        {
+                                            type: 'FACE_DETECTION',
+                                            maxResults: 5, // 얼굴 최대 감지 수
+                                        },
+                                    ],
+                                },
+                            ],
+                        }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Google Cloud Vision API에서 받아온 결과를 처리
+                        const faces = data.responses[0].faceAnnotations;
+
+                        let resultHTML = "Joy likelihood for each face:<br>";
+                        faces.forEach((face, index) => {
+                            resultHTML += `Face ${index + 1}: Joy - ${face.joyLikelihood}<br>`;
+                        });
+
+                        resultDiv.innerHTML = resultHTML;
+                    })
+                    .catch(error => {
+                        console.error('Error calling Google Cloud Vision API:', error);
+                        resultDiv.innerHTML = 'Error calling Google Cloud Vision API';
+                    });
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                resultDiv.innerHTML = 'Please select an image file.';
+            }
+        });
+    </script>
+</body>
+</html>

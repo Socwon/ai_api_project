@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        #title {
+            font-size: 100px;
+            margin-top: -300px; /* 타이틀 위쪽 여백 조정 */
+            font-weight: bold; /* 폰트 굵기를 설정합니다. */
+        }
+
+        #content {
+            display: flex;
+            align-items: center;
+            margin-top: 20px; /* 이미지와 컨텐츠 사이 여백 조정 */
+        }
+
+        #image {
+            margin-right: -100px;
+            margin-top: -450px; /* 이미지를 위로 이동, 원하는 만큼 음수 값을 설정 */
+        }
+
+        #image img {
+            width: 150px; /* 이미지 크기 조정 */
+            height: 150px;
+            cursor: pointer; /* 이미지를 클릭 가능하게 만듭니다. */
+        }
+
+        #boxes {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            margin: 0 150px;
+            background-color: #ccc;
+        }
+
+        #button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -300px;
+            margin-right: -200px;
+            margin-left: -150px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">감정읽는 뇌</div>
+
+    <div id="content">
+        <a href="main.html"> <!-- 링크를 설정하여 다른 HTML 페이지로 이동 -->
+            <div id="image">
+                <img src="home.png" alt="새 이미지 설명"> <!-- 새 이미지 경로와 설명으로 변경 -->
+            </div>
+        </a>
+
+        <div id="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <div id="button-container">
+        <button class="button">출력하기</button>
+        <button class="button">초기화</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "seraphic-beacon-402301",
+  "private_key_id": "9ab6bc42f8ea6959aa5d1fcec3a3803ebde03716",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCnkf+BwhFn5SEW\ntcweafg2r8NSaPUpTn87dgXA0z76Q/dZGX7uVrCYmBQpEBoelxpxfaoEeuz+OQ8l\n7ptG50P7M0mQd7qkm/aIQ/1M2ohRtEscL2dWayjN0kmdYEWtPW1y+QPsHq+H+231\n82fCExxQbD6ggoYqUaRK5WhTK5OwjDZSjyYPs4IotLZoBaxET+awGeVwskwwMdbL\nRjgSqT8Cd4LiNSmN6mogFdzbfSE5u/a8awNZm1GU9ao5WSNEGmzhomm4gTtJwMfF\nZB5RpAUApUZct+if2zcCRiXCP9HHpXs5f/gISX3L1YmhNE+Crs6wK+8RYFm0uynC\nbNshr1LpAgMBAAECggEAD1K0kYAmcRCU5mOcrR3N2KtZIjKuk3bF//EWjNfMWxyG\ntG82ShNjjeqfMlOSfeBdpsnh14vJmuQrGFIBwTmx39lEZXlrV/TalgKYmbPkkgsZ\ncLP9gDunlS2g9WsJqBI1TVWLyCZUsQu69goKX4b5mHmTfwA8hkdlrYMdl3hlRpgf\noC+VEMp+GWQDPtLpK7Fkx9MkVU8syDA0K4rqGFYtwxpLStscJWGgDeMVitHKczVM\nw6RqXwisrQkgGZw2UJWpqLCgg1olTbB+IddQNg96FiPmGytJQbdis889TNIdPBtS\nzE9gzXkhxlW4dQ8HK8DXYu34raPxDKlhxPgmssmvoQKBgQDmw6BSksurpY9wduGp\nF1nBcH1JhdsbyZxM5dbWQn92An8ZS5mH/FmpnVoYFZpCoMzj633Ft/OF0wBjhJ1O\nShvkKp4ESqt8gmHaqPyniQHSDr6aUSvMy1SStZwrJxG/NAGVY8TQ6B2PV9WFceSH\nna/B/sVJqyBYxZdeKDOjCLG1YQKBgQC55TlNyFTUqhahoDS1tWMuyrVPGPg83TCI\nuhxWw+sX2XloTkPN2Hb4Ln0l4QurTJeyPWp3WaSE4sdlsrUTOtRd7daL4uJuVT0X\nSnH1pisr4CL3wj+03BuICfaX3iCLd9r8ZmWMNkk23alnsDpf/QuwHj7gfoDGxnyJ\nztgT9LqCiQKBgQCiUgrs6msvYvbBwi27djxhcBIA7JISOr+h664x6naj+N+UWHQ3\njk83mwJrnI50vY1B6T0AHgPDJ4fHeNn53vE9jqi2FhwIKeJRH7sQ0bOhIVP7Uot/\ns6raw7qFNCcsmpVekt43oH5ifQMpqdJ5fnbJ+76ksiW/q8VsqtSfopb2IQKBgArR\ngkI6lGVD+MkzL54bjkgc1+xggaHZJYfvfNK32CitKVmepGeIX3QWEIZx0GIJtRJU\nbKvBdceeAwiyG8Ogutc0jjXZ4F+XalS+ql8nan/FLYPJtDdsT9Xc7pLsBGzZbs8d\njm9YgW5F/CPip6MKcPGw8OvTsN7gkkLa3Mxcg7YxAoGAQNFY6WGqDGJ3s2yjlUmg\nEiLrwN28yEmTJF/tV0acfIGW/PRx2VL16YBG+LtlAuW698M+o/5WB8alnm2VH1f+\nFZAAWqkysKTfpWpeZneTcqYHpjooA+yNC2YZ/+oCXERHn+OFw3rQCSl5ajPNJ4ZL\nBQjBC3Xkr1kGcp/9frNC1Ac=\n-----END PRIVATE KEY-----\n",
+  "client_email": "id-485@seraphic-beacon-402301.iam.gserviceaccount.com",
+  "client_id": "114729321499581436211",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/id-485%40seraphic-beacon-402301.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

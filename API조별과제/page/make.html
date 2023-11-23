@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        #title-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #title {
+            font-size: 90px;
+            font-weight: bold;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #image img {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            margin-top: -100px;
+            margin-left: -500px;
+            position: absolute;
+            left: 100;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #upper-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        #boxes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -150px;
+        }
+
+        .box {
+            width: 30%;
+            height: 200px;
+            background-color: #ccc;
+        }
+
+        .square-box {
+            width: 30%;
+            height: 200px;
+            background-color: #ccc;
+            margin-top: 20px;
+            position: relative; /* 상대 위치 설정 */
+        }
+
+        .box-text {
+            position: absolute;
+            top: 50%; /* 상자의 중앙에 위치하도록 상단 위치 조정 */
+            left: 50%; /* 상자의 중앙에 위치하도록 좌측 위치 조정 */
+            transform: translate(-50%, -50%); /* 가운데 정렬을 위한 조정 */
+        }
+
+        .additional-text {
+            position: absolute;
+            bottom: 10px; /* 하단 위치 조정 */
+            right: 10px; /* 우측 위치 조정 */
+        }
+
+        #lower-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="title-container">
+        <a href="main.html">
+            <div id="image">
+                <img src="home.png" alt="새 이미지 설명">
+            </div>
+        </a>
+        <div id="title">감정읽는 뇌</div>
+    </div>
+
+    <div id="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="square-box">
+        <div class="box-text">확실히 이렇게 스스로 코딩을 해보니 손이 더 익숙해지고 쉽게 이해하게 되어 나름 재미있었던 과제였습니다.</div>
+        <div class="additional-text">손채원 -socwon87@g.shingu.ac.kr</div>
+    </div>
+
+    <div class="square-box">
+        <div class="box-text">생각처럼 나오지 않을 때도 있었지만 
+            그래도 스스로 고민하고 해결하면서 원하는 결괏값을 도출해 내는 과정이
+            재밌기도 하고 뿌듯한 시간이었습니다.</div>
+        <div class="additional-text">lsr022@g.shingu.ac.kr</div>
+    </div>
+
+    <div class="square-box">
+        <div class="box-text">코드를 짜는게 생각보다 쉽지는 않았지만 스스로 해보니 더욱 실력이 올라간거 같고 재미있던 시간이었습니다.그리고 어린친구들과 아픈 친구들을 위한 어플이라서 더욱더 뿌듯한 시간이었습니다.</div>
+        <div class="additional-text">somin1626@g.shingu.ac.kr</div>
+    </div>
+
+    <div id="lower-box">
+        <!-- Content inside lower box is removed -->
+    </div>
+</body>
+</html>

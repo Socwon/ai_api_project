@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감정 읽는 뇌</title>
+    <style>
+        #icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px;
+            height: 150px;
+        }
+
+        #mainText {
+            font-size: 100px;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .table-container {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-cell {
+            display: table-cell;
+            text-align: center;
+            vertical-align: top;
+            padding: 20px;
+            border: 8px solid #ddd; /* 테두리를 두껍게 만듦 */
+            border-radius: 15px;
+            width: 50%; /* 표의 크기를 동일하게 조정 */
+        }
+
+        .table-cell img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .table-cell strong {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="main.html">
+        <img id="icon" src="home.png" alt="메인화면으로 이동합니다."></a>
+    <div>
+        <h1 id="mainText">감정 읽는 뇌</h1>
+    </div>
+
+    <script>
+        document.getElementById('icon').addEventListener('click', function () {
+            window.location.href = 'main.html';
+        });
+    </script>
+
+    <div class="table-container">
+        <div class="table-row">
+            <!-- 첫 번째 행 -->
+            <div class="table-cell">
+                <img src="1.jpg" alt="1번 사진">
+                <strong>이 사진은 샘플 사진입니다. 왼쪽에 있는 빈칸에 표정이 담겨진 사진을 넣습니다.</strong>
+            </div>
+
+            <div class="table-cell">
+                <img src="1.1.PNG" alt="1.1번 사진">
+                <strong>샘플 사진을 인공지능이 분석하고 표정을 감지하여 JOY라는 결과를 도출해내는 것을 알 수 있습니다.</strong>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <!-- 두 번째 행 -->
+            <div class="table-cell">
+                <img src="2.jpg" alt="2번 사진">
+                <strong>이 사진은 두 번째 샘플 사진입니다. 왼쪽에 있는 빈칸에 표정이 담겨진 사진을 넣습니다.</strong>
+            </div>
+
+            <div class="table-cell">
+                <img src="2.1.PNG" alt="2.1번 사진">
+                <strong>샘플 사진을 인공지능이 분석하고 표정을 감지하여 SUPRISE라는 결과를 도출해내는 것을 알 수 있습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감정 읽는 뇌</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            border: 10px solid rgb(255, 198, 76); /* 테두리 설정 */
+        }
+
+        #mainContainer {
+            display: flex;
+            align-items: center;
+        }
+
+        #leftImage,
+        #rightImage {
+            width: 350px; /* 이미지의 크기 조절 */
+            height: 450px;
+            margin: 0 20px; /* 이미지 간의 간격 조절 */
+        }
+
+        #mainText {
+            font-size: 100px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        #buttonContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #startButton,
+        #helpButton {
+            font-size: 70px;
+            padding: 20px 50px;
+            cursor: pointer;
+            margin-bottom: 40px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            display: block;
+        }
+
+        #footerButtons {
+            display: flex;
+            flex-direction: center;
+            align-items: flex-end;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .footerButton {
+            font-size: 30px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 5px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            display: inline;
+            text-decoration: none;
+        }
+
+        #startButton,
+        #helpButton {
+            transition: background-color 0.3s ease;
+        }
+
+        #startButton:hover,
+        #helpButton:hover {
+            background-color: rgb(255, 198, 76);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainContainer">
+        <img id="leftImage" src="brain.png" alt="Left Image">
+        <h1 id="mainText">감정 읽는 뇌</h1>
+        <img id="rightImage" src="brain2.png" alt="Right Image">
+    </div>
+
+    <div id="buttonContainer">
+        <button id="startButton" onclick="startReading()">시작하기</button>
+        <button id="helpButton" onclick="showHelp()">도움말</button>
+    </div>
+
+    <div id="footerButtons">
+        <a href="source.html" class="footerButton">출처</a>
+        <a href="make.html" class="footerButton">개발자</a>
+    </div>
+
+    <script>
+        function startReading() {
+            // 시작하기 버튼 클릭 시 동작
+        }
+
+        function showHelp() {
+            // 도움말 버튼 클릭 시 동작
+        }
+    </script>
+</body>
+
+</html>
